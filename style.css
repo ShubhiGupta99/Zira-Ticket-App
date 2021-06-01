@@ -1,0 +1,201 @@
+body{
+    margin: 0%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.navbar{
+    height: 12vh;
+    background-color:rgb(63, 18, 105);
+    /* rgb(44, 15, 48); */
+    /* #333; */
+    display: flex;
+    justify-content: space-between;
+    padding-left:5vw;
+    padding-right: 5vw;
+    border-bottom: 3.4px solid rgba(0, 0, 0, 0.582);
+}
+
+
+.title{
+    width: 20vw;
+    margin-top: 4vh;
+    color: rgba(255, 248, 220, 0.993);
+    font-size: larger;
+    font-weight: bold;
+    font-family:cursive;
+
+}
+.ticket-container{
+    height: 88vh;
+    background-color:thistle;
+    position: relative;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+    overflow-y: auto;
+     /* //shifts the ticket to next line */
+}
+
+.filter-container,
+.add-delete-container{
+    height: 8vh;
+    margin-top: 2vh;
+    border-radius: 3px;
+    background-color:antiquewhite;
+}
+.filter-container{
+    width:20vw;
+    display: flex;
+    /* margin-left: 8vw; */
+}
+
+.add-delete-container{
+    width: 10vw;
+    display: flex;
+    /* margin-left: 36vw; */
+    
+}
+
+.add,.delete{
+    height:100%;
+    width:50%;
+    
+}
+
+.action-btn {
+    display: block;
+    height: 50%;
+    width: 40%;
+    margin-top: calc(8vh * 0.25);
+    margin-left: calc(10vw *0.50 * 0.3);
+    background-color: rgb(99, 63, 133);
+    padding-left: 4%;
+    padding-top: 4%;
+    align-items: center;
+    color: whitesmoke;
+    /* border: 1px solid gray; */
+}
+
+.filter{
+    height:100%;
+    width: 25%;
+    
+}
+
+.pink,.blue,.green,.yellow
+{
+    display:block;
+    width: 40%;
+    height:50%;
+    margin-top:calc(8vh*.25);
+    margin-left:calc(20vw*0.25*0.3);/* filter width(=filter-con *25%)*[100-40]/2% */
+    
+    border-radius: 3px ;
+    border: 2px solid gray;
+}
+
+.pink,.modal-pink,.ticket-color-pink{
+    background-color: rgb(224, 62, 56);
+}
+
+.blue,.modal-blue,.ticket-color-blue{
+    background-color:rgb(21, 162, 197);
+}
+
+.green,.modal-green,.ticket-color-green{
+    background-color: rgb(60, 202, 60);
+}
+.yellow,.modal-yellow,.ticket-color-yellow{
+    background-color:rgb(236, 236, 12);
+}
+
+.filter:hover{
+    cursor: pointer;
+    background-color:rgb(163, 144, 180);
+}
+
+.filter.active{
+    background-color:rgb(163, 144, 180);
+}
+
+.add:hover,.delete:hover{
+    cursor: pointer;
+    background-color:rgb(163, 144, 180);
+}
+
+
+.modal{
+    display: flex;
+    height: 20rem;
+    width:35rem;
+    background-color: white;
+    box-shadow: 0 0 50px 5px grey; /*horizonal-offset vertical-offset blur  spread*/
+    position: absolute;
+    top:7rem;
+    left: calc((100vw - 35rem)/2);
+}
+
+.task-to-be-added{
+    height: 70%;
+    width:70%;
+    padding: 2rem;
+    outline: none;
+    overflow: auto;
+}
+
+.modal-priority-list{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width:30%;
+    justify-content: space-between;
+    padding: 2.5rem;
+    background-color:rgb(63, 18, 105);
+    
+}
+
+.modal-filter.active{
+    border: 3px solid white;
+}
+
+.modal-filter{
+    width: 100%;
+    height: 20%;   
+}
+
+.ticket{
+    height: 7rem;
+    width:12rem;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+.ticket:hover{
+    transform: scale(1.2);
+}
+
+.ticket-color {
+    height: 6%;
+    width: 100%;
+}
+
+.ticket-id {
+    height: 15%;
+    width: 100%;
+    padding: 3%;
+    color: grey;
+}
+
+.task{
+    height: 79%;
+    width: 100%;
+    padding: 3%;
+}
+
+.ticket.active{
+    box-shadow: 0 0 3px 2px;
+} 
